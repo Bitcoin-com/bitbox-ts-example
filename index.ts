@@ -1,8 +1,9 @@
-import { IBITBOXCli } from 'bitbox-cli/lib/bitbox-cli';
-import { AddressDetailsResult } from './node_modules/bitbox-cli/lib/Address';
+import IBITBOXCli from 'bitbox-cli/lib/bitbox-cli';
 
 let BITBOXCli = <IBITBOXCli> require('bitbox-cli/lib/bitbox-cli').default;
 let BITBOX = new BITBOXCli();
+
+import { AddressDetailsResult } from './node_modules/bitbox-cli/lib/Address';
 
 let langs = [
   'english',
