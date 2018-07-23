@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Bitcoin-com/bitbox-scaffold-node#readme",
   "devDependencies": {
-    "bitbox-cli": "1.4.1"
+    "bitbox-cli": "1.4.1",
+    "@types/node": "^10.5.2"
   }
 }
