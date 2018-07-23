@@ -1,6 +1,6 @@
 {
-  "name": "bitbox-scaffold-node",
-  "version": "1.4.1",
+  "name": "bitbox-ts-example",
+  "version": "1.0.0",
   "description": "Basic command line node app w/ BITBOX bindings",
   "main": "index.js",
   "scripts": {
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bitcoin-com/bitbox-scaffold-node.git"
+    "url": "git+https://github.com/Bitcoin-com/bitbox-ts-example.git"
   },
-  "author": "Gabriel Cardona @ Bitcoin.com",
+  "author": "https://twitter.com/James_Cramer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bitcoin-com/bitbox-scaffold-node/issues"
+    "url": "https://github.com/Bitcoin-com/bitbox-ts-example/issues"
   },
-  "homepage": "https://github.com/Bitcoin-com/bitbox-scaffold-node#readme",
+  "homepage": "https://github.com/Bitcoin-com/bitbox-ts-example#readme",
   "devDependencies": {
-    "bitbox-cli": "1.4.1",
+    "bitbox-cli": "1.4.2",
     "@types/node": "^10.5.2"
   }
 }
