@@ -34,9 +34,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var BITBOXCli = require('bitbox-cli/lib/bitbox-cli').default;
-var BITBOX = new BITBOXCli();
+var bitbox_cli_1 = __importDefault(require("bitbox-cli/lib/bitbox-cli"));
+var BITBOX = new bitbox_cli_1.default();
 var langs = [
     'english',
     'chinese_simplified',
@@ -49,13 +52,20 @@ var langs = [
 ];
 function testAsyncFunction() {
     return __awaiter(this, void 0, void 0, function () {
-        var details;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, BITBOX.Address.details("bitcoincash:qzjhzmheyyyt3sjv5qwvxq0wmweun5jfzsrca5hc9y")];
+        var details, _a, _b;
+        return __generator(this, function (_c) {
+            switch (_c.label) {
+                case 0:
+                    console.log("Test async address details:");
+                    return [4 /*yield*/, BITBOX.Address.details("bitcoincash:qzjhzmheyyyt3sjv5qwvxq0wmweun5jfzsrca5hc9y")];
                 case 1:
-                    details = _a.sent();
-                    console.log(details.balance);
+                    details = _c.sent();
+                    console.log(details);
+                    console.log("Test Price: Current Bitcoin Cash Prices:");
+                    _b = (_a = console).log;
+                    return [4 /*yield*/, BITBOX.Price.current()];
+                case 2:
+                    _b.apply(_a, [_c.sent()]);
                     return [2 /*return*/];
             }
         });

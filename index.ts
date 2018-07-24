@@ -1,6 +1,4 @@
-import IBITBOXCli from 'bitbox-cli/lib/bitbox-cli';
-
-let BITBOXCli = <IBITBOXCli> require('bitbox-cli/lib/bitbox-cli').default;
+import BITBOXCli from 'bitbox-cli/lib/bitbox-cli';
 let BITBOX = new BITBOXCli();
 
 import { AddressDetailsResult } from './node_modules/bitbox-cli/lib/Address';
@@ -17,8 +15,18 @@ let langs = [
 ]
 
 async function testAsyncFunction(): Promise<void> {
+  console.log("Test async address details:")
   let details = <AddressDetailsResult> await BITBOX.Address.details("bitcoincash:qzjhzmheyyyt3sjv5qwvxq0wmweun5jfzsrca5hc9y");
-  console.log(details.balance);
+  console.log(details);
+
+  console.log("Test Price: Current Bitcoin Cash Prices:")
+  console.log(await BITBOX.Price.current());
+
+  // console.log("Test Real-time sockets:");
+  // let socket = new BITBOX.Socket();
+  // socket.listen("transactions",  (message: any) => {
+  //   console.log(message);
+  // });
 }
 
 testAsyncFunction();
